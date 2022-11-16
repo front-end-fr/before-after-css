@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(23, 23, 32);
+    font-family: "Montserrat", sans-serif;
+    color : white;
+}
+
+h1 {
+    color : rgb(236, 235, 241);
+    text-align: center;
+    margin: 48px auto;
+    font-size: 4em;
+}
+
+.astuce {
+    background-color: rgb(138, 197, 236);
+    position: relative;
+    padding: 24px;
+    padding-left: 88px;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    counter-increment: astuce;
+}
+
+h2::after {
+    content : " #" counter(astuce)
+}
+
+.astuce::before {
+    content : url("./emoji_objects_FILL0_wght400_GRAD0_opsz48.svg");
+    background-color: rgb(30, 89, 141);
+    width: 64px;
+    height: 100%;
+    position: absolute;
+    top : 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
